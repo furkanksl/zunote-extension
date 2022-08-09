@@ -1,0 +1,22 @@
+.datetime-picker-container{
+    width: 100%; 
+    height: 70px; 
+    display: flex; 
+    flex-direction: column; 
+    row-gap: 30px;
+  }
+  
+  .rmc-picker-mask{
+    background-size: 100% 0px !important;
+  }
+  
+  .rmc-date-picker{
+    height: 50px;
+    margin-top: -20px;
+    overflow: hidden;
+    padding: 0px !important;
+  
+    :first-child{
+      flex: 1 1 20px !important;
+    }
+  }
