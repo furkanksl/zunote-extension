@@ -7,7 +7,7 @@ import DatePicker from 'rmc-date-picker/lib/DatePicker';
 import enUs from 'rmc-date-picker/lib/locale/en_US';
 
 export const minDate = new Date();
-export const maxDate = new Date(2024, 1, 1, 23, 49, 59);
+export const maxDate = new Date(2025, 12, 1, 23, 59, 59);
 export let now = new Date();
 
 export function format(date:any) {

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './App.scss';
 import { SaveButton } from './components/SaveButton';
-import userLogo from './assets/icons/user.png'
-import reminderLogo from './assets/icons/reminder.png'
-import categoryLogo from './assets/icons/category.png'
+import userLogo from './assets/icons/user.png';
+import reminderLogo from './assets/icons/reminder.png';
+import categoryLogo from './assets/icons/category.png';
 import { DateTimePicker } from './components/DateTimePicker';
 
 function App() {
