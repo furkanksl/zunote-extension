@@ -12,11 +12,12 @@
     padding: 8px;
     font-size: 16px;
     border-width: 4px;
-    border-style: double;
+    // border-style: double;
     border-radius: 10px;
-    background-color: #a1f180;
-    border-color: #614661;
+    background-color: #fff293;
+    border-color: #ffce56;
     font-style: none;
+    resize: none;
 }
 
 .text-field textarea:focus {
