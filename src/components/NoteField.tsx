@@ -5,7 +5,7 @@ type Props = {};
 export function NoteField(props: Props) {
     return (
         <div className="text-field">
-            <textarea rows={3}></textarea>
+            <textarea rows={3} placeholder={"Type something.."}></textarea>
             <SaveButton />
         </div>
     );
