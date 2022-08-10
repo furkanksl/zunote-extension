@@ -27,29 +27,45 @@ export function Header(props: Props) {
 
     return (
         <div className="header">
-            <div className="profile">
-                <img src={notesLogo} alt="Notes" title="All Notes" />
-            </div>
-            <div className="functions-section">
-                <div className="reminder gradient-border" onClick={onToggleReminder}>
-                    <img
-                        className={isReminderSelected ? "onActive" : ""}
-                        src={reminderLogo}
-                        alt="Reminder"
-                        title="Set Reminder"
-                    />
+            <p>ZU NOTE</p>
+            <div className="navbar">
+                <div className="header-col">
+                    <div className="profile">
+                        <img src={notesLogo} alt="Notes" title="All Notes" />
+                    </div>
+                    <p className="altTitle">Notes</p>
                 </div>
-                <div className="category gradient-border" onClick={onToggleCategory}>
-                    <img
-                        className={isCategorySelected ? "onActive" : ""}
-                        src={categoryLogo}
-                        alt="Category"
-                        title="Set Category"
-                    />
+
+                <div className="header-col">
+                    <div className="reminder gradient-border" onClick={onToggleReminder}>
+                        <img
+                            className={isReminderSelected ? "onActive" : ""}
+                            src={reminderLogo}
+                            alt="Reminder"
+                            title="Set Reminder"
+                        />
+                    </div>
+
+                    <p className="altTitle">Reminder</p>
                 </div>
-            </div>
-            <div className="profile">
-                <img src={userLogo} alt="Profile" title="Profile" />
+                <div className="header-col">
+                    <div className="category gradient-border" onClick={onToggleCategory}>
+                        <img
+                            className={isCategorySelected ? "onActive" : ""}
+                            src={categoryLogo}
+                            alt="Category"
+                            title="Set Category"
+                        />
+                    </div>
+                    <p className="altTitle">Category</p>
+                </div>
+
+                <div className="header-col">
+                    <div className="profile">
+                        <img src={userLogo} alt="Profile" title="Profile" />
+                    </div>
+                    <p className="altTitle">Profile</p>
+                </div>
             </div>
         </div>
     );
