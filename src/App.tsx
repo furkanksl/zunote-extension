@@ -4,6 +4,7 @@ import { SaveButton } from './components/SaveButton';
 import userLogo from './assets/icons/user.png';
 import reminderLogo from './assets/icons/reminder.png';
 import categoryLogo from './assets/icons/category.png';
+import notesLogo from './assets/icons/notes.png';
 import { DateTimePicker } from './components/DateTimePicker';
 
 function App() {
@@ -25,20 +26,23 @@ function App() {
     <div className="App">
       <div className="wrapper">
         <div className="header">
-          <p>Notes</p>
+        <div className="profile">
+            <img src={notesLogo} alt="Notes" title='All Notes'/>
+        </div>
+          <div className="functions-section">
+          <div className="reminder gradient-border" onClick={toggleReminder}>
+            <img className={(isReminderSelected ? "onActive" : "")} src={reminderLogo} alt="Reminder" title='Set Reminder'/>
+          </div>
+          <div className="category gradient-border" onClick={toggleCategory}>
+            <img className={(isCategorySelected ? "onActive" : "")} src={categoryLogo} alt="Category" title='Set Category'/>
+            </div>
+        </div>
           <div className="profile">
             <img src={userLogo} alt="Profile" title='Profile'/>
           </div>
         </div>
 
-        <div className="functions-section">
-          <div className="reminder" onClick={toggleReminder}>
-            <img src={reminderLogo} alt="Reminder" title='Set Reminder'/>
-          </div>
-          <div className="category" onClick={toggleCategory}>
-            <img src={categoryLogo} alt="Category" title='Set Category'/>
-            </div>
-        </div>
+        
         {isReminderSelected ?  <DateTimePicker /> : null}
         <div className="text-field">
           <textarea rows={3}></textarea>
