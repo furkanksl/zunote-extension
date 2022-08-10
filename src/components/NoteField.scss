@@ -13,10 +13,18 @@
     border-width: 4px;
     // border-style: double;
     border-radius: 10px;
-    background-color: #fff293;
+    background-color: #ffce56; // #fff293;
     border-color: #ffce56;
     font-style: none;
     resize: none;
+    color: black;
+
+    &::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #00000046;
+        opacity: 1; /* Firefox */
+        text-shadow: none;
+    }
 }
 
 .text-field textarea:focus {
