@@ -18,9 +18,15 @@ export function ProfilePage(props: Props) {
             </div>
 
             <div className="other-pages-container">
-                <div className="about-page">About</div>
-                <div className="feedback-page">Feedback</div>
-                <div className="donate-page">Donate</div>
+                <Link to={"about"}>
+                    <div className="about-page">About</div>
+                </Link>
+                <Link to={"feedback"}>
+                    <div className="feedback-page">Feedback</div>
+                </Link>
+                <Link to={"donate"}>
+                    <div className="donate-page">Donate</div>
+                </Link>
                 <div className="version-text">Version 0.1.0</div>
             </div>
 
