@@ -2,6 +2,7 @@ import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import { AboutPage } from "./pages/about/AboutPage";
+import { DonatePage } from "./pages/donate/DonatePage";
 import { FeedbackPage } from "./pages/feedback/FeedbackPage";
 import { HomePage } from "./pages/home/HomePage";
 import { LoginPage } from "./pages/login/LoginPage";
@@ -17,6 +18,7 @@ function App() {
                     <Route path="" element={<ProfilePage />} />
                     <Route caseSensitive={true} path="about" element={<AboutPage />} />
                     <Route caseSensitive={true} path="feedback" element={<FeedbackPage />} />
+                    <Route caseSensitive={true} path="donate" element={<DonatePage />} />
                 </Route>
                 <Route path="/*" element={<Navigate to="login" replace />} />
             </Routes>
