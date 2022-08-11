@@ -1,0 +1,95 @@
+.profile-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+
+    .empty {
+        width: 30px;
+    }
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 10px;
+    .profile-image {
+        height: 60px;
+        width: 60px;
+        border-radius: 100%;
+        background-color: gray;
+        border: 3px solid #edae0c;
+    }
+
+    p {
+        margin: 0;
+        font-weight: 200;
+    }
+
+    p.email {
+        font-size: 14px;
+    }
+
+    p.joined-date {
+        font-size: 12px;
+    }
+}
+
+.other-pages-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+
+    div {
+        padding: 10px;
+        width: 100%;
+        border-top: 0.5px solid black;
+        font-size: 16px;
+        font-weight: 600;
+
+        &:hover {
+            background-color: #9d99998b;
+            cursor: pointer;
+        }
+    }
+
+    :nth-child(4) {
+        font-size: 12px;
+        font-weight: 300;
+
+        &:hover {
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+}
+a.logout-link {
+    margin: auto auto 30px auto;
+}
+button.logout {
+    padding: 8px;
+    border-radius: 7px;
+    border: 0.1px solid black;
+    background-color: #d7d7d7;
+    color: black;
+    width: 100%;
+    max-width: 100px;
+    &:hover {
+        background-color: #9d9999;
+        p {
+            color: white;
+        }
+    }
+
+    p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 100;
+    }
+}

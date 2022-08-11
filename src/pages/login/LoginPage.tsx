@@ -30,17 +30,3 @@ export function LoginPage(props: Props) {
         </div>
     );
 }
-{
-    /*   <div className="wrapper">
-            <div className="animation">
-                <div className="round round-circle"></div>
-            </div>
-            <div className="glass-container">
-                <div className="title"></div>
-                <div className="email"></div>
-                <div className="password"></div>
-            </div>
-            
-        
-        </div>*/
-}

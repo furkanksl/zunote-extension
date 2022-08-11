@@ -1,0 +1,16 @@
+.back-button {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    // border-radius: 100%;
+    &:hover {
+        svg {
+            border-radius: 100%;
+            background-color: #edae0c;
+
+            // path {
+            //     fill: rgb(8, 255, 74);
+            // }
+        }
+    }
+}

@@ -7,6 +7,7 @@ import notesLogo from "../assets/icons/notes.png";
 import { useDispatch, useSelector } from "react-redux";
 import { setReminderState, toggleReminder } from "../redux/feature/reminder.reducer";
 import { setCategoryState, toggleCategory } from "../redux/feature/category.reducer";
+import { Link } from "react-router-dom";
 
 type Props = {};
 export function Header(props: Props) {
@@ -61,9 +62,11 @@ export function Header(props: Props) {
                 </div>
 
                 <div className="header-col">
-                    <div className="profile">
-                        <img src={userLogo} alt="Profile" title="Profile" />
-                    </div>
+                    <Link to={"/profile"}>
+                        <div className="profile">
+                            <img src={userLogo} alt="Profile" title="Profile" />
+                        </div>
+                    </Link>
                     <p className="altTitle">Profile</p>
                 </div>
             </div>
