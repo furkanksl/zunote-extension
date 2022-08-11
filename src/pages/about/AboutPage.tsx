@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { BackButton } from "../../components/BackButton";
 import { PageHeader } from "../../components/PageHeader";
 import styles from "./AboutPage.module.scss";
 
@@ -15,7 +14,7 @@ export function AboutPage(props: Props) {
                 debitis aliquid. Ipsa, temporibus cumque.
             </p>
 
-            <a className={styles.source} href="https://github.com/furkanksl" target={"_blank"}>
+            <a className={styles.source} href="https://github.com/furkanksl" target={"_blank"} rel="noreferrer">
                 source code
             </a>
 
