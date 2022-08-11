@@ -65,25 +65,20 @@
         }
     }
 
-    :nth-child(4) {
-        font-size: 12px;
-        font-weight: 300;
-
-        &:hover {
-            background-color: transparent;
-            cursor: pointer;
-        }
+    :first-child > div {
+        border-top: 0 !important;
     }
 }
 a.logout-link {
-    margin: auto auto 30px auto;
+    margin: auto auto 0px auto;
+    width: 100%;
 }
 button.logout {
     padding: 8px;
     border-radius: 7px;
     border: 0.1px solid black;
-    background-color: #d7d7d7;
-    color: black;
+    background-color: #ecae0b;
+    color: white;
     width: 100%;
     max-width: 100px;
     &:hover {
@@ -96,6 +91,13 @@ button.logout {
     p {
         margin: 0;
         font-size: 14px;
-        font-weight: 100;
+        font-weight: 800;
+        text-shadow: 1px 1px black;
     }
+}
+
+.version-text {
+    font-size: 12px;
+    font-weight: 300;
+    margin: 10px auto 10px auto;
 }
