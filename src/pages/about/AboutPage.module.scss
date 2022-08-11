@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .empty {
+        width: 30px;
+    }
+}
+
+p.title {
+    margin: 0;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.donateContainer {
+    margin: 30px auto 0 auto;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.donate {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: greenyellow;
+    color: black;
+    font-weight: 300;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(124, 184, 34);
+        color: white;
+        font-weight: 600;
+    }
+}
+
+.source {
+    margin: 30px auto 0 auto;
+}
