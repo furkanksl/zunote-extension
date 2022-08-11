@@ -3,7 +3,7 @@ import "./HomePage.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { DateTimePicker } from "../../components/DateTimePicker";
 import { Header } from "../../components/Header";
-import { NoteField } from "../../components/NoteField";
+import { TextFieldWithButton } from "../../components/TextFieldWithButton";
 import { Category } from "../../components/Category";
 import closeIcon from "../../assets/icons/close-svgrepo-com.svg";
 import moment from "moment";
@@ -51,7 +51,7 @@ export function HomePage(props: Props) {
                     ""
                 )}
             </div>
-            <NoteField />
+            <TextFieldWithButton placeholder="Type something..." buttonText="SAVE" />
         </div>
     );
 }

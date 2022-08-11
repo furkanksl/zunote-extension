@@ -27,7 +27,6 @@ export function ProfilePage(props: Props) {
                 <Link to={"donate"}>
                     <div className="donate-page">Donate</div>
                 </Link>
-                <div className="version-text">Version 0.1.0</div>
             </div>
 
             <Link to={"/login"} className="logout-link">
@@ -35,6 +34,8 @@ export function ProfilePage(props: Props) {
                     <p>LOGOUT</p>
                 </button>
             </Link>
+
+            <div className="version-text">Version 0.1.0</div>
         </div>
     );
 }
