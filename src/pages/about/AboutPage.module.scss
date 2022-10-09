@@ -5,19 +5,10 @@
     color: black;
 }
 
-.donate {
-    padding: 10px;
-    border-radius: 10px;
-    background-color: greenyellow;
-    color: black;
-    font-weight: 300;
-    cursor: pointer;
-
-    &:hover {
-        background-color: rgb(124, 184, 34);
-        color: white;
-        font-weight: 600;
-    }
+.desc {
+    text-align: justify;
+    max-width: 300px;
+    margin: 20px auto;
 }
 
 .source {

@@ -1,20 +1,23 @@
+@import "../../styles/styles";
+
 .text-field {
     // height: 80px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-    margin-bottom: 30px;
+    width: 100%;
+    max-width: 255px;
 }
 
 .text-field textarea {
-    padding: 8px;
+    @include rounded();
+    @include shadowed-box();
+
+    padding: 13px 8px;
     font-size: 16px;
-    border-width: 4px;
-    // border-style: double;
-    border-radius: 10px;
-    background-color: #ffce56; // #fff293;
-    border-color: #ffce56;
+    border-width: 0px;
+    background-color: $secondary-color; // #fff293;
     font-style: none;
     resize: none;
     color: black;

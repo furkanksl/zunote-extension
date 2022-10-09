@@ -1,8 +1,8 @@
 import * as React from "react";
 import styles from "./FeedbackPage.module.scss";
 
-import { PageHeader } from "../../components/PageHeader";
-import { TextFieldWithButton } from "../../components/TextFieldWithButton";
+import { PageHeader } from "../../components/Header/PageHeader";
+import { TextFieldWithButton } from "../../components/Form/TextFieldWithButton";
 
 import feedbackIcon from "../../assets/icons/feedback.png";
 

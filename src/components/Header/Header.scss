@@ -1,3 +1,5 @@
+@import "../../styles/styles";
+
 .header {
     display: flex;
     flex-direction: column;
@@ -16,7 +18,7 @@
     align-items: center;
     justify-content: space-between;
     width: calc(100% - 20px);
-    padding: 10px;
+    padding: 5px 10px;
     // border-bottom: 1px solid black;
 
     :nth-child(2):hover,
@@ -83,6 +85,9 @@
     flex: 1;
 
     svg {
+        @include rounded();
+        @include shadowed-box();
+
         height: 40px !important;
     }
 
@@ -98,7 +103,7 @@
 
     p {
         display: none;
-        font-size: 13px;
+        font-size: 16px;
     }
 }
 

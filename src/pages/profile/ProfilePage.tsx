@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { BackButton } from "../../components/BackButton";
+import { BackButton } from "../../components/Header/BackButton";
 import ProfileSvgComponent from "../../components/Svg/ProfileSvg";
 import "./ProfilePage.scss";
 

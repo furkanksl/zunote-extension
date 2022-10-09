@@ -1,21 +1,20 @@
 import "./Header.scss";
-import userLogo from "../assets/icons/user.png";
-import { useDispatch, useSelector } from "react-redux";
-import { setReminderState, toggleReminder } from "../redux/feature/reminder.reducer";
-import { setCategoryState, toggleCategory } from "../redux/feature/category.reducer";
+import { useDispatch } from "react-redux";
+import { setReminderState, toggleReminder } from "../../redux/feature/reminder.reducer";
+import { setCategoryState, toggleCategory } from "../../redux/feature/category.reducer";
 import { Link } from "react-router-dom";
-import NotesSvgComponent from "./Svg/NotesSvg";
-import ReminderSvgComponent from "./Svg/ReminderSvg";
-import CategorySvgComponent from "./Svg/CategorySvg";
-import ProfileSvgComponent from "./Svg/ProfileSvg";
-import LogoSvgComponent from "./Svg/LogoSvg";
+import NotesSvgComponent from "../Svg/NotesSvg";
+import ReminderSvgComponent from "../Svg/ReminderSvg";
+import CategorySvgComponent from "../Svg/CategorySvg";
+import ProfileSvgComponent from "../Svg/ProfileSvg";
+import LogoSvgComponent from "../Svg/LogoSvg";
 
 type Props = {};
 export function Header(props: Props) {
     const dispatch = useDispatch();
 
-    const isReminderSelected = useSelector((state: any) => state.reminder.value);
-    const isCategorySelected = useSelector((state: any) => state.category.value);
+    // const isReminderSelected = useSelector((state: any) => state.reminder.value);
+    // const isCategorySelected = useSelector((state: any) => state.category.value);
 
     function onToggleReminder() {
         dispatch(toggleReminder());

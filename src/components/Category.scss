@@ -1,3 +1,5 @@
+@import "../styles/styles";
+
 li p {
     text-decoration: none !important;
     color: #2d2f31;
@@ -5,14 +7,14 @@ li p {
 }
 
 nav {
-    width: 200px;
+    width: 255px;
     margin: 0px auto;
-    height: 25.5px;
+    height: 35px;
 }
 
 span.title {
     padding: 0 5px;
-    background: #ffce56;
+    background: $secondary-color;
     color: black;
     cursor: pointer;
     display: flex;
@@ -23,7 +25,7 @@ span.title {
     border-top-right-radius: 10px;
     font-size: 14px;
     height: 100%;
-    max-height: 25px;
+    max-height: 35px;
 
     .icon {
         width: 10px;
@@ -36,7 +38,7 @@ span.title {
     clear: both;
     // width: 100%;
     height: 0px;
-    max-height: 60px;
+    max-height: 135px;
     overflow: scroll;
     text-align: left;
     transition: height 0.3s ease;
@@ -46,13 +48,15 @@ span.title {
     border: 1px solid black;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    background: lightgray;
+    background: $secondary-color;
 }
 
 .slide li {
-    padding: 5px 0px 0px 15px;
+    @include rounded();
 
-    p:hover {
+    padding: 5px;
+
+    &:hover {
         background-color: #989c9f45;
         cursor: pointer;
     }
@@ -65,8 +69,8 @@ span.title {
 }
 
 .active-slide {
-    height: 100px;
-    padding: 0px 10px 10px 0px;
+    height: auto;
+    padding: 10px;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

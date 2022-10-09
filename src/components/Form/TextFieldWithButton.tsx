@@ -1,4 +1,3 @@
-import * as React from "react";
 import "./TextFieldWithButton.scss";
 import { SaveButton } from "./SaveButton";
 
