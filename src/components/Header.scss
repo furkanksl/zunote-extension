@@ -80,6 +80,11 @@
     height: 60px;
     justify-content: space-between;
     align-items: center;
+    flex: 1;
+
+    svg {
+        height: 40px !important;
+    }
 
     &:hover {
         svg > g > path {
@@ -93,7 +98,7 @@
 
     p {
         display: none;
-        font-size: 16px;
+        font-size: 13px;
     }
 }
 

@@ -7,8 +7,8 @@ type SvgComponentProp = {
 const LogoSvgComponent = (props: SvgComponentProp) => (
     <svg
         onClick={props.function}
-        width="60"
-        height="31"
+        width="90"
+        height="51"
         viewBox="0 0 60 31"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
