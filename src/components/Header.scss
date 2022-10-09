@@ -18,6 +18,15 @@
     width: calc(100% - 20px);
     padding: 10px;
     // border-bottom: 1px solid black;
+
+    :nth-child(2):hover,
+    :last-child:hover {
+        &:hover {
+            svg > g > path {
+                fill: white;
+            }
+        }
+    }
 }
 
 .altTitle {
@@ -71,54 +80,20 @@
     height: 60px;
     justify-content: space-between;
     align-items: center;
-}
 
-.gradient-border {
-    --border-width: 3px;
+    &:hover {
+        svg > g > path {
+            stroke: white;
+        }
 
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    z-index: 1;
-    margin-top: 3px;
-
-    :hover {
-        background: #a1f180 !important;
+        p {
+            display: flex;
+        }
     }
 
-    &::after {
-        position: absolute;
-        content: "";
-        top: calc(-1 * var(--border-width));
-        left: calc(-1 * var(--border-width));
-        z-index: -1;
-        width: calc(100% + var(--border-width) * 2);
-        height: calc(100% + var(--border-width) * 2);
-        background: linear-gradient(
-            60deg,
-            hsl(224, 85%, 66%),
-            hsl(269, 85%, 66%),
-            hsl(314, 85%, 66%),
-            hsl(359, 85%, 66%),
-            hsl(44, 85%, 66%),
-            hsl(89, 85%, 66%),
-            hsl(134, 85%, 66%),
-            hsl(179, 85%, 66%)
-        );
-        background-size: 300% 300%;
-        background-position: 0 50%;
-        border-radius: 100%;
-        animation: moveGradient 4s alternate infinite;
-    }
-}
-
-@keyframes moveGradient {
-    50% {
-        background-position: 100% 50%;
+    p {
+        display: none;
+        font-size: 16px;
     }
 }
 

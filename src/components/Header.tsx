@@ -1,13 +1,14 @@
-import * as React from "react";
 import "./Header.scss";
 import userLogo from "../assets/icons/user.png";
-import reminderLogo from "../assets/icons/reminder.png";
-import categoryLogo from "../assets/icons/category.png";
-import notesLogo from "../assets/icons/notes.png";
 import { useDispatch, useSelector } from "react-redux";
 import { setReminderState, toggleReminder } from "../redux/feature/reminder.reducer";
 import { setCategoryState, toggleCategory } from "../redux/feature/category.reducer";
 import { Link } from "react-router-dom";
+import NotesSvgComponent from "./Svg/NotesSvg";
+import ReminderSvgComponent from "./Svg/ReminderSvg";
+import CategorySvgComponent from "./Svg/CategorySvg";
+import ProfileSvgComponent from "./Svg/ProfileSvg";
+import LogoSvgComponent from "./Svg/LogoSvg";
 
 type Props = {};
 export function Header(props: Props) {
@@ -28,44 +29,27 @@ export function Header(props: Props) {
 
     return (
         <div className="header">
-            <p>ZU NOTE</p>
+            <LogoSvgComponent function={() => {}} />
             <div className="navbar">
                 <div className="header-col">
-                    <div className="profile">
-                        <img src={notesLogo} alt="Notes" title="All Notes" />
-                    </div>
+                    <NotesSvgComponent function={() => {}} />
+
                     <p className="altTitle">Notes</p>
                 </div>
 
                 <div className="header-col">
-                    <div className="reminder gradient-border" onClick={onToggleReminder}>
-                        <img
-                            className={isReminderSelected ? "onActive" : ""}
-                            src={reminderLogo}
-                            alt="Reminder"
-                            title="Set Reminder"
-                        />
-                    </div>
+                    <ReminderSvgComponent function={onToggleReminder} />
 
                     <p className="altTitle">Reminder</p>
                 </div>
                 <div className="header-col">
-                    <div className="category gradient-border" onClick={onToggleCategory}>
-                        <img
-                            className={isCategorySelected ? "onActive" : ""}
-                            src={categoryLogo}
-                            alt="Category"
-                            title="Set Category"
-                        />
-                    </div>
+                    <CategorySvgComponent function={onToggleCategory} />
                     <p className="altTitle">Category</p>
                 </div>
 
                 <div className="header-col">
                     <Link to={"/profile"}>
-                        <div className="profile">
-                            <img src={userLogo} alt="Profile" title="Profile" />
-                        </div>
+                        <ProfileSvgComponent function={() => {}} />
                     </Link>
                     <p className="altTitle">Profile</p>
                 </div>
