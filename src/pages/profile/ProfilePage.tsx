@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { BackButton } from "../../components/BackButton";
+import ProfileSvgComponent from "../../components/Svg/ProfileSvg";
 import "./ProfilePage.scss";
 
 type Props = {};
@@ -10,9 +11,8 @@ export function ProfilePage(props: Props) {
             <div className="profile-header">
                 <BackButton />
                 <div className="profile-details">
-                    <div className="profile-image"></div>
+                    <ProfileSvgComponent function={() => {}} />
                     <p className="email">abc....@gmail.com</p>
-                    <p className="joined-date">Joined 2022</p>
                 </div>
                 <div className="empty"></div>
             </div>

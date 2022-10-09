@@ -17,12 +17,9 @@
     align-items: center;
     row-gap: 10px;
 
-    .profile-image {
+    svg {
         height: 60px;
         width: 60px;
-        border-radius: 100%;
-        background-color: gray;
-        border: 3px solid #edae0c;
     }
 
     p {
@@ -69,10 +66,12 @@
         border-top: 0 !important;
     }
 }
+
 a.logout-link {
     margin: auto auto 0px auto;
     width: 100%;
 }
+
 button.logout {
     padding: 8px;
     border-radius: 7px;
