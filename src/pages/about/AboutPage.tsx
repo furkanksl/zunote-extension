@@ -18,7 +18,7 @@ export function AboutPage() {
             </a>
 
             <a className={styles.source} href="https://github.com/furkanksl" target={"_blank"} rel="noreferrer">
-                source code
+                GITHUB
             </a>
         </div>
     );

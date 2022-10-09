@@ -6,19 +6,12 @@ import { TextFieldWithButton } from "../../components/Form/TextFieldWithButton";
 
 import feedbackIcon from "../../assets/icons/feedback.png";
 
-type Props = {};
-const textfieldStyles = {
-    textfield: {
-        marginTop: "auto",
-        marginbBottom: "30px",
-    },
-};
-export function FeedbackPage(props: Props) {
+export function FeedbackPage() {
     return (
         <div className="wrapper">
             <PageHeader title="FEEDBACK" />
             <img className={styles.feedbackIcon} src={feedbackIcon} alt="feedback-icon" />
-            <TextFieldWithButton styles={textfieldStyles} placeholder="Let us know the ..." buttonText="SEND" />
+            <TextFieldWithButton placeholder="Let us know the ..." buttonText="SEND" />
         </div>
     );
 }
