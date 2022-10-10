@@ -1,15 +1,21 @@
 {
-  "name": "ZU NOTE",
+  "name": "ZU-NOTE",
   "description": "Take a note quickly!",
   "version": "0.1",
-  "manifest_version": 2,
-  "browser_action": {
-    "default_popup": "index.html",
-    "default_title": "Take a note quickly"
-  },
+  "manifest_version": 3,
+  "permissions": ["webRequest"],
+  "host_permissions": ["<all_urls>"],
   "icons": {
-    "16": "logo192.png",
-    "48": "logo192.png",
-    "128": "logo192.png"
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_title": "ZU-NOTE",
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png"
+    }
   }
 }
