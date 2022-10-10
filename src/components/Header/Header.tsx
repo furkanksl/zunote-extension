@@ -31,14 +31,14 @@ export function Header(props: Props) {
             <LogoSvgComponent function={() => {}} />
             <div className="navbar">
                 <div className="header-col">
-                    <NotesSvgComponent function={() => {}} />
-
+                    <a href="https://zunote.io/notes" target="noopener">
+                        <NotesSvgComponent function={() => {}} />
+                    </a>
                     <p className="altTitle">Notes</p>
                 </div>
 
                 <div className="header-col">
                     <ReminderSvgComponent function={onToggleReminder} />
-
                     <p className="altTitle">Reminder</p>
                 </div>
                 <div className="header-col">
