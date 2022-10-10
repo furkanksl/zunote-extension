@@ -9,9 +9,15 @@
     margin: 0 auto;
 }
 
-.logo {
-    width: 180px;
-    height: 100px;
+.logo > svg {
+    height: 99px;
+    width: 200px;
+}
+
+.login-text {
+    color: #ae9452;
+    font-size: 20px;
+    font-weight: 300;
 }
 
 .page-toggle {

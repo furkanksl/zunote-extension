@@ -65,9 +65,11 @@ export function AuthPage() {
     return (
         <div className="wrapper">
             <div className={styles["auth-page-wrapper"]}>
-                <LogoSvgComponent function={() => {}} />
+                <a className={styles.logo} href="https://zunote.io/auth" target="noopener">
+                    <LogoSvgComponent function={() => {}} />
+                </a>
 
-                <p>LOGIN</p>
+                <p className={styles["login-text"]}>LOGIN</p>
                 <div className={styles.input}>
                     <EmailSvgComponent />
                     <input
