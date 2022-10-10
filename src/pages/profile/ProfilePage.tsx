@@ -2,10 +2,15 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { BackButton } from "../../components/Header/BackButton";
 import ProfileSvgComponent from "../../components/Svg/ProfileSvg";
+import FirebaseService from "../../services/firebase/firebase.service";
 import "./ProfilePage.scss";
 
-type Props = {};
-export function ProfilePage(props: Props) {
+export function ProfilePage() {
+    const firebaseService = new FirebaseService();
+
+    function logout() {
+        firebaseService.logout();
+    }
     return (
         <div className="wrapper">
             <div className="profile-header">
@@ -29,11 +34,9 @@ export function ProfilePage(props: Props) {
                 </Link>
             </div>
 
-            <Link to={"/login"} className="logout-link">
-                <button className="logout">
-                    <p>LOGOUT</p>
-                </button>
-            </Link>
+            <button className="logout" onClick={logout}>
+                <p>LOGOUT</p>
+            </button>
 
             <div className="version-text">Version 0.1.0</div>
         </div>
