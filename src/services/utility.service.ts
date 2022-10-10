@@ -12,7 +12,7 @@ export default class UtilityService {
     }
 
     shortEmailAddress(email: string) {
-        if (email.length <= 20) return email;
+        if (email.length <= 25) return email;
         else {
             const mailPart = email.split("@");
             const shortenedEmail = email.slice(0, 5) + "..." + mailPart[1];
