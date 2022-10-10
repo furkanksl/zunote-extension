@@ -1,5 +1,5 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { getDatabase, ref, set, get, child } from "firebase/database";
+import { getDatabase, ref, set, get, push, child } from "firebase/database";
 
 import { toast } from "react-toastify";
 import { auth } from "../../firebase";
@@ -60,11 +60,21 @@ export default class FirebaseService {
         }
     }
 
-    async getCategories() {
-        const catREf = ref(getDatabase());
+    async sendFeedback(text: string) {
+        const feedbackRef = ref(getDatabase(), "feedbacks/" + auth.currentUser?.uid);
 
         try {
-            const snapshot = await get(child(catREf, "categories/" + auth.currentUser?.uid));
+            await push(feedbackRef, text);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async getCategories() {
+        const catRef = ref(getDatabase());
+
+        try {
+            const snapshot = await get(child(catRef, "categories/" + auth.currentUser?.uid));
             if (snapshot.exists()) {
                 let cats = JSON.parse(snapshot.val())?.categories ?? [];
                 return cats;
