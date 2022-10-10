@@ -2,11 +2,14 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { BackButton } from "../../components/Header/BackButton";
 import ProfileSvgComponent from "../../components/Svg/ProfileSvg";
+import { auth } from "../../firebase";
 import FirebaseService from "../../services/firebase/firebase.service";
+import UtilityService from "../../services/utility.service";
 import "./ProfilePage.scss";
 
 export function ProfilePage() {
     const firebaseService = new FirebaseService();
+    const utilityService = new UtilityService();
 
     function logout() {
         firebaseService.logout();
@@ -17,7 +20,7 @@ export function ProfilePage() {
                 <BackButton />
                 <div className="profile-details">
                     <ProfileSvgComponent function={() => {}} />
-                    <p className="email">abc....@gmail.com</p>
+                    <p className="email">{utilityService.shortEmailAddress(auth?.currentUser?.email ?? "")}</p>
                 </div>
                 <div className="empty"></div>
             </div>
