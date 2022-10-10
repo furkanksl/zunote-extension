@@ -15,11 +15,7 @@ export function DateTimePicker(props: Props) {
         return current.toDate() >= date;
     }
 
-    function onChangeDatetime(val: any) {
-        console.log(val.unix());
-
-        dispatch(setReminder(val.unix()));
-    }
+    const onChangeDatetime = (val: any) => dispatch(setReminder(val.utc().valueOf()));
 
     return (
         <div className="datetime-picker-container">
