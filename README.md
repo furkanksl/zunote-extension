@@ -1,6 +1,6 @@
 # ZUNOTE extension app
 
-You can take a note quickly in your browser while surfing in the internet. You can download it from release section or [here](https://github.com/furkanksl/zunote-extension/releases/tag/0.1)
+You can take a note quickly in your browser while surfing in the internet. You can download it from [Chrome Web Store](https://chrome.google.com/webstore/detail/zu-note/aagjdbjcifmjjphngpolelbinpkhpjbm?hl=en) or release section or [here](https://github.com/furkanksl/zunote-extension/releases/tag/0.1)
 
 It will be at Chrome Extension Store soon.
 
